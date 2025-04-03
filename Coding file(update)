@@ -52,9 +52,10 @@ void loop() {
 
     lcd.clear();
     lcd.setCursor(0, 0);
-    lcd.print("ADC: "); 
-    lcd.print(adcvalue);
-
+    lcd.print("Current: "); 
+    lcd.print(ecurrent, 2);
+    lcd.print(" A");
+  
     if (adcvalue >= 500 && adcvalue <= 530) {  
       lcd.setCursor(0, 2);
       lcd.print("No Load TF OFF");  
